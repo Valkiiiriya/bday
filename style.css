@@ -168,6 +168,18 @@ h2 img {
   color: #fff;
 }
 
+.card__label_credit {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background: #FF6700;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
 /* Размещаем рассрочку на товар относительно изображения */
 .card__credit_plan {
   padding: 4px 8px;
@@ -287,6 +299,34 @@ h2 img {
   font-size: 22px;
   color: #cacaca;
   padding-left: 10px;
+}
+
+.card__price--gift {
+  font-weight: 700;
+  font-size: 22px;
+  border: 2px solid #FF6700;
+  border-radius: 10px;
+  padding: 8px;
+  color: #FF6700;
+  width: 40%;
+}
+
+.card__price--gift::before {
+  content: '';
+  display: inline-flex;
+  background: url("https://mi.by/upload/medialibrary/bd6/hstw6gosc6qqug6mn3qcqeojvs7q4lba.png");
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+.card__price--watch {
+  font-weight: 700;
+  font-size: 16px;
+  color: #cacaca;
+  padding-left: 10px;
+  width: 50%;
 }
 
 .card__title {
@@ -433,10 +473,15 @@ h2 img {
   }
 
   .card__label {
-      font-size: 14px;
-      left: 15px;
-      right: 15px;
-    }
+    font-size: 14px;
+    left: 15px;
+  }
+
+  .card__label_credit {
+    font-size: 14px;
+    left: 15px;
+    right: 15px;
+  }
 
   .card__title {
     font-size: 14px;
