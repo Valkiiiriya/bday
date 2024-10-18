@@ -49,6 +49,7 @@ body h1,
   align-items: center;
   background: #000;
   margin: 5px 20px;
+  padding: 15px 35px;
   overflow: hidden;
   border-radius: 15px;
   width: 15%;
@@ -66,9 +67,9 @@ body h1,
   cursor: pointer;
   color: #fff;
   font-weight: 600;
-  padding: 15px 35px;
+  /*padding: 15px 35px;*/
   transition: 0.3s;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 body h2 {
