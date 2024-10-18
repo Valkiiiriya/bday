@@ -68,6 +68,7 @@ body h1,
   font-weight: 600;
   padding: 15px 35px;
   transition: 0.3s;
+  width: 100%;
 }
 
 body h2 {
