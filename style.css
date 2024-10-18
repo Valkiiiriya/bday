@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background: url("https://mi.by/upload/iblock/68c/lgrpesm0timucz6fbdzrnt8f4ol6p0ry.png");
+  background-repeat: repeat;
+}
+
+body h1,
+.breadcrumbs {
+  display: none;
+}
+
+.main_img {
+  display: block;
+  margin: 0 auto 15px;
+  width: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.nav_menu {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 20px auto;
+}
+
+.nav_title {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  /*flex-direction: row;*/
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav_title li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  margin: 5px 20px;
+  overflow: hidden;
+  padding: 15px 35px;
+  border-radius: 15px;
+  width: 15%;
+}
+
+.nav_title li:hover {
+  background: #272727;
+}
+
+.nav_title a {
+  display: block;
+  text-decoration: none;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+body h2 {
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  text-align: left;
+  max-width: 1290px;
+  margin: 0 auto 20px;
+  color: #000;
+  font-weight: 700;
+}
+
+h2 img {
+  padding-left: 5px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* Автоматически заполняем на всю ширину grid-контейнера */
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-auto-rows: 430px;
+  width: 100%;
+  max-width: 1300px;
+  /* Ширина grid-контейнера */
+  justify-content: center;
+  justify-items: stretch;
+  /* Размещаем карточку по центру */
+  column-gap: 10px;
+  /* Отступ между колонками */
+  row-gap: 25px;
+  /* Отступ между рядами */
+  margin: 0 auto;
+}
+
+
+.card {
+  font-family: 'Montserrat', sans-serif;
+  width: 315px;
+  min-height: 350px;
+  background-color: #fff;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* Размещаем элементы в колонку */
+  border-radius: 15px;
+  transition: 0.2s;
+  position: relative;
+}
+
+/* При наведении на карточку - появляется тень */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.18);
+}
+
+.card__top {
+  flex: 0 0 220px;
+  /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+  position: relative;
+  overflow: hidden;
+  /* Скрываем, что выходит за пределы */
+}
+
+/* Контейнер для картинки */
+.card__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Встраиваем картинку в контейнер card__image */
+  transition: 0.2s;
+}
+
+/* При наведении - увеличиваем картинку */
+.card__image:hover>img {
+  transform: scale(1.1);
+}
+
+/* Размещаем скидку на товар относительно изображения */
+.card__label {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background: #FF6700;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Размещаем рассрочку на товар относительно изображения */
+.card__credit_plan {
+  padding: 4px 8px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  background: #FF6700;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  user-select: none;
+}
+
+.card__credit_plan a {
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  user-select: none;
+}
+
+/* Всплывающая подсказка про рассрочку */
+[data-tooltip] {
+  position: relative;
+}
+
+.card__top p {
+  margin: 0;
+}
+
+[data-tooltip]::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 200px;
+  left: 20px;
+  top: 40px;
+  background: #9E140A;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  top: 50;
+}
+
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  /* Занимаем всю оставшуюся высоту карточки */
+  padding: 10px;
+}
+
+.card__prices {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 10px 20px;
+}
+
+.card__price--discount {
+  font-weight: 700;
+  font-size: 25px;
+  border: 2px solid #FF6700;
+  border-radius: 10px;
+  padding: 8px;
+  color: #FF6700;
+}
+
+.card__price--discount::before {
+  content: '';
+  display: inline-flex;
+  background: url("https://mi.by/upload/medialibrary/bd6/hstw6gosc6qqug6mn3qcqeojvs7q4lba.png");
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.card__price--common {
+  font-weight: 700;
+  font-size: 25px;
+  color: #cacaca;
+  padding-left: 10px;
+}
+
+.card__price--credit {
+  font-weight: 700;
+  font-size: 22px;
+  border: 2px solid #FF6700;
+  border-radius: 10px;
+  padding: 8px;
+  color: #FF6700;
+}
+
+.card__price--credit::before {
+  content: '';
+  display: inline-flex;
+  background: url("https://mi.by/upload/medialibrary/bd6/hstw6gosc6qqug6mn3qcqeojvs7q4lba.png");
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+.card__price--month {
+  font-weight: 700;
+  font-size: 22px;
+  color: #cacaca;
+  padding-left: 10px;
+}
+
+.card__title {
+  display: block;
+  text-decoration: none;
+  user-select: none;
+  margin: 0 10px 10px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 150%;
+  color: #424242 !important;
+}
+
+.card__title:hover {
+  color: #FF6700 !important;
+}
+
+.card__add {
+  display: block;
+  width: auto;
+  max-width: 315px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 15px;
+  cursor: pointer;
+  /* Меняем курсор при наведении */
+  transition: 0.2s;
+  margin: auto 10px 5px;
+}
+
+.card__add a {
+  text-decoration: none;
+  user-select: none;
+  display: flex;
+  color: #fff;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__add:hover {
+  border: 1px solid #272727;
+  background-color: #272727;
+}
+
+
+@media screen and (min-width: 1300px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 975px) {
+  .container {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  
+  body h2 {
+    font-size: 24px;
+    max-width: 965px;
+  }
+}
+
+@media screen and (max-width: 1115px) and (min-width: 975px) {
+  .nav_title li {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 974px) and (min-width: 680px) {
+  body h2 {
+    font-size: 22px;
+    max-width: 640px;
+  }
+
+  .nav_title {
+    font-size: 18px;
+  }
+
+  .nav_title li {
+    width: 25%;
+  }
+
+}
+
+@media screen and (max-width: 680px) and (min-width: 630px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  body h2 {
+    font-size: 18px;
+    max-width: 620px;
+  }
+}
+
+@media screen and (max-width: 629px) and (min-width: 450px) {
+  body h2 {
+    font-size: 18px;
+    max-width: 410px;
+  }
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 451px) {
+ 
+  .container {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .card__price--discount {
+    font-size: 18px;
+  }
+
+  .card__price--credit,
+  .card__price--month {
+    font-size: 14px;
+  }
+
+  .card__price--credit::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card__price--discount::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card__price--common {
+    font-size: 16px;
+  }
+
+  .card__label {
+      font-size: 14px;
+      left: 15px;
+      right: 15px;
+    }
+
+  .card__title {
+    font-size: 14px;
+  }
+
+  .card__bottom {
+    padding: 10px 5px;
+  }
+
+  .img_background_1,
+  .img_background_2,
+  .img_background_3,
+  .img_background_4 {
+      background-size: contain;
+    }
+
+  .img_background_5,
+  .img_background_6 {
+      background: none;
+    }
+  
+  .nav_menu {
+    margin-bottom: 10px;
+  }
+  
+  .nav_title {
+    font-size: 15px;
+    }
+
+  .nav_title li {
+      width: 20%;
+    }
+
+  .card__credit_plan {
+    left: 5px;
+  }
+
+  [data-tooltip]::after {
+    width: 180px;
+    font-size: 12px;
+    left: 5px;
+  }
+}
+
+
+@media screen and (max-width: 450px) and (min-width: 390px) {
+  body h2 {
+    font-size: 18px;
+    max-width: 345px;
+  }
+
+  .cards {
+    column-gap: 5px;
+    row-gap: 15px;
+  }
+
+  .card {
+    width: 170px;
+  }
+
+  .card__price--discount {
+    font-size: 14px;
+  }
+
+  .card__price--discount::before {
+      width: 14px;
+      height: 14px;
+    }
+
+  .card__price--common {
+    font-size: 14px;
+  }
+
+  .card__prices_title_discount,
+  .card__prices_title_count {
+    font-size: 10px;
+  }
+
+  .card__bottom {
+    padding: 5px;
+  }
+
+  .card__title {
+    font-size: 12px;
+    margin: 0 10px 5px;
+  }
+
+  .card__label {
+    font-size: 14px;
+    left: 15px;
+  }
+
+  .card__add {
+    font-size: 13px;
+  }
+
+  .card__add a {
+    height: 26px;
+  }
+
+  .img_background_1, 
+  .img_background_2, 
+  .img_background_3, 
+  .img_background_4 {
+    background-size: contain;
+  }
+
+  .img_background_5,
+  .img_background_6 {
+    background: none;
+  }
+
+  .nav_menu {
+    margin-bottom: 10px;
+  }
+  .nav_title {
+    font-size: 16px;
+    }
+  
+  .nav_title li {
+   width: 25%;
+   margin: 5px 10px;
+   }
+  
+  .card__credit_plan {
+    left: 5px;
+    font-size: 10px;
+  }
+
+  [data-tooltip]::after {
+    width: 150px;
+    font-size: 10px;
+    left: 5px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  body h2 {
+    font-size: 18px;
+    max-width: 315px;
+  }
+  
+  .nav_menu {
+        margin-bottom: 10px;
+      }
+    
+      .nav_title {
+        font-size: 14px;
+      }
+    
+      .nav_title li {
+        width: 30%;
+        margin: 5px 10px;
+        padding: 12px 20px;
+      }
+    
+}
+
+.mi_color {
+  color: #ff6700;
+}
