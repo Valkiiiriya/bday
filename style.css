@@ -296,7 +296,7 @@ h2 img {
 .card__price--watch {
   font-weight: 700;
   font-size: 16px;
-  color: #cacaca;
+  color: #898989;
   padding-left: 10px;
   width: 49%;
 }
@@ -463,11 +463,13 @@ h2 img {
   }
 
   .card__price--credit,
-  .card__price--month {
+  .card__price--month,
+  .card__price--gift {
     font-size: 14px;
   }
 
-  .card__price--credit::before {
+  .card__price--credit::before,
+  .card__price--gift::before {
     width: 14px;
     height: 14px;
   }
@@ -479,6 +481,12 @@ h2 img {
 
   .card__price--common {
     font-size: 16px;
+  }
+
+  .card__price--watch {
+    font-size: 10px;
+    color: #404040;
+    width: 37%;
   }
 
   .card__label {
@@ -560,6 +568,8 @@ h2 img {
 
   .card__price--watch {
     font-size: 10px;
+    color: #ff6700;
+    padding-left: 5px;
     width: 37%;
   }
 
