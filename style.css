@@ -472,6 +472,7 @@ h2 img {
   .card__price--credit,
   .card__price--gift {
     font-size: 14px;
+    padding: 6px;
   }
 
   .card__price--credit::before,
