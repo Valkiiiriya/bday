@@ -325,7 +325,6 @@ h2 img {
   color: #000;
   background-color: #ECF0F2;
   text-align: center;
-  border: 1px solid #ECF0F2;
   border-radius: 12px;
   cursor: pointer;
   /* Меняем курсор при наведении */
@@ -344,7 +343,6 @@ h2 img {
 }
 
 .card__add:hover {
-  border: 1px solid #FF6700;
   background-color: #FF6700;
   color: #fff;
 }
