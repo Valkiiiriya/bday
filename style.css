@@ -73,7 +73,7 @@ body h1,
 
 .nav_title a:hover {
   color: #fff;
-  transition: 0.1s;
+  /*transition: 0.1s;*/
 }
 
 body h2 {
