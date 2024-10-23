@@ -559,13 +559,13 @@ h2 img {
 
   .card__price--gift::before,
   .card__price--credit::before {
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
   }
   
   .card__price--gift,
   .card__price--credit {
-    font-size: 12px;
+    font-size: 11px;
     padding: 5px;
   }
 
