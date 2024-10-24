@@ -325,6 +325,7 @@ h2 img {
   font-size: 17px;
   color: #000;
   background-color: #ECF0F2;
+  border: 2px solid #FF6700;
   text-align: center;
   border-radius: 12px;
   cursor: pointer;
